@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 22px;">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="BookMyShow - Book movie, event, and concert tickets online" />
+    <meta name="keywords" content="movies, events, tickets, BookMyShow, online booking" />
+    <meta name="author" content="BookMyShow Team" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>BookMyShow</title>
+    <style>
+      body {
+        font-size: 1.5em;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+      }
+      #theme-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 0.5em 1em;
+        background: #000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        z-index: 1000;
+      }
+      footer {
+        text-align: center;
+        padding: 1em;
+        background-color: #f0f0f0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <button id="theme-toggle">Toggle Theme</button>
+
+    <footer>
+      &copy; 2025 BookMyShow. All rights reserved.
+    </footer>
+
+    <script>
+      const btn = document.getElementById('theme-toggle');
+      btn.addEventListener('click', () => {
+        const currentBg = document.body.style.backgroundColor;
+        document.body.style.backgroundColor = currentBg === 'black' ? 'white' : 'black';
+        document.body.style.color = currentBg === 'black' ? 'black' : 'white';
+      });
+    </script>
+  </body>
+</html>
